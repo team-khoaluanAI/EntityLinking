@@ -1,7 +1,7 @@
 import sys
 import requests, json, ast
 
-token = "hi5PVqLx1qIeSA-iyJ9br9ENjVduyH58yLP9MST17dNr39jEtch31v9XjVaAEbjl"
+token = xxxxxxx
 
 def getJson(text):
     link = "https://viettelgroup.ai/nlp/api/v1/ner?header=Content-Type:application/json&header=token:"+token+"&text="+text
