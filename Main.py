@@ -12,17 +12,15 @@ def timeSince(since):
     return '%dm %ds' % (m, s)
 
 if __name__ == '__main__':
-    label_link = 'Yago(vi)/labels.nt'
-    sameas_link = 'Yago(vi)/wiki_link.nt'
-    type_link = 'Yago(vi)/types.nt'
-    fact_link = 'Yago(vi)/facts.nt'
+    label_link = '/labels.nt'
+    sameas_link = '/wiki_link.nt'
+    type_link = '/types.nt'
+    fact_link = '/facts.nt'
 
     string = ''
     for word in sys.argv[1:]:
         string += word + ' '
     text = string
-    # text="Messi cùng đồng đội bị Bayern vùi dập ở trận tứ kết Champions League diễn ra rạng sáng 15/8 (giờ Hà Nội)."
-
 
     query_text = ER.getJson(text)
     query_text = ER.ast.literal_eval(ER.json.dumps(query_text)) # Remove u before key
